@@ -1,0 +1,2 @@
+INSERT INTO PRODUTO(nome,preco,promocao,promocao_id) VALUES ('Cheeseburguer',25.50,'Promoção do dia',1);
+INSERT INTO PRODUTO(nome,preco,promocao,promocao_id) VALUES ('Hambúrguer vegano', 32.70,'Dia do hambúrguer',3);
