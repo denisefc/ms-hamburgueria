@@ -24,6 +24,7 @@ public class ProdutoController {
     }
     @GetMapping("/{id}")
     public ResponseEntity<?> findById(@PathVariable Long id) {
+        log.info("Encontrar produto por id: {}", id);
         Optional<Produto> produto = produtoService.findById(id);
         if (produto.isPresent()) {
             return ResponseEntity.ok(produto);

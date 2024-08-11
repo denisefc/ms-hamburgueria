@@ -24,6 +24,7 @@ public class PedidoController {
 
     @PostMapping
     public ResponseEntity<Pedido> create(@RequestBody Pedido pedido){
+        log.info("Criando Pedido:" + pedido.toString());
         BigDecimal totalDesconto = descontoService.getTotalDesconto(pedido);
         pedidoService.salvar(pedido);
         BigDecimal valorSemDesconto = pedidoService.calcularValorTotal(pedido);
