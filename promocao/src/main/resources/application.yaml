@@ -14,6 +14,9 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     defer-datasource-initialization: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 server:
   port: ${app.myport}
 eureka:
@@ -22,3 +25,19 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+management:
+  tracing:
+    propagation:
+      type: w3c
+    sampling:
+      probability: 1
+openapi:
+  service:
+    title: promocao doc
+    version: 1.0.0
+    url: http://localhost:9098
+springdoc:
+  api-docs:
+    path: /promocao/v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html

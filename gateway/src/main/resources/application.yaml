@@ -28,3 +28,24 @@ eureka:
       defaultUrl: http://localhost:8761/eureka
 server:
   port: 9098
+springdoc:
+  enable-native-support: true
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    config-url: /v3/api-docs/swagger-config
+    urls:
+      - url: /v3/api-docs
+        name: API Gateway Service
+        primaryName: API Gateway Service
+      - url: /produto/v3/api-docs
+        name: Produto
+        primaryName: Produto
+      - url: /promocao/v3/api-docs
+        name: Promocao
+        primaryName: Promocao
+      - url: /pedido/v3/api-docs
+        name: Pedido
+        primaryName: Pedido
