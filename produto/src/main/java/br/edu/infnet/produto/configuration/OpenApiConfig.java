@@ -17,16 +17,17 @@ import org.springframework.context.annotation.Configuration;
 import java.util.List;
 
 @Configuration
-@OpenAPIDefinition(servers = {@Server(url = "/produto", description = "Produtos da Hamburgueria")},
-        security = {@SecurityRequirement(name = "bearerAuth")})
-@SecurityScheme(
-        name = "bearerAuth",
-        description = "JWT authentication",
-        scheme = "bearer",
-        type = SecuritySchemeType.HTTP,
-        bearerFormat = "JWT",
-        in = SecuritySchemeIn.HEADER
+@OpenAPIDefinition(servers = {@Server(url = "/produto", description = "Produtos da Hamburgueria")}
+//        , security = {@SecurityRequirement(name = "bearerAuth")}
 )
+//@SecurityScheme(
+//        name = "bearerAuth",
+//        description = "JWT authentication",
+//        scheme = "bearer",
+//        type = SecuritySchemeType.HTTP,
+//        bearerFormat = "JWT",
+//        in = SecuritySchemeIn.HEADER
+//)
 public class OpenApiConfig {
 
     @Bean
